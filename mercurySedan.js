@@ -1,9 +1,9 @@
 //this includes the vehicle class as a module
-const VehicleModule = require("./vehicleBaseClass")
+const VehicleModule = require('/Users/juddchalmersmelvin/class/js/5.5.5-activity-array-automotive/vehicleBaseClass.js').Vehicle
 
 //this shows how to call from this module...
-let v = new VehicleModule.Vehicle("Mercury", "Sedan", "1965", "color", "mileage");
-console.log(v.make)
+// let v = new VehicleModule.Vehicle("Mercury", "Sedan", "1965", "color", "mileage");
+// console.log(v.make)
 
 
 //After you write the derived Car class, you should test it out.
@@ -14,8 +14,7 @@ console.log(v.make)
 //TO DO: Code the Car subclass here or in index.js file, i.e. class Car extends Vehicle ...
 
 class Car extends Vehicle {
-    constructor(make, model, year, color, mileage, maximumPassengers,
-        passengers, numberOfWheels, maximumSpeed, fuel, scheduleService) {
+    constructor(make, model, year, color, mileage) {
         super(make, model, year, color, mileage)
         this.maximumPassengers = maximumPassengers; 
         this.passengers = passengers; 
@@ -26,7 +25,6 @@ class Car extends Vehicle {
     }
 
     loadPassenger(num) {
-
     }
 
     start() {
@@ -35,16 +33,23 @@ class Car extends Vehicle {
         }
     }
 
-    start() {
-        if (this.fuel > 0) {
-            return this.started = true; 
+    scheduleService() {
+        if (this.mileage > 30000) {
+            this.scheduleService = true
+            return this.scheduleService;
         }
     }
 
 }
 
+let myCar = new Car('mercury', 'rad_sedan', '2002', 'white', 50000)
 
+myCar.start()
+myCar.loadPassenger(5)
+myCar.stop()
+myCar.checkService()
 
+console.log(myCar)
 
 
 
