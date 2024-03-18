@@ -92,5 +92,5 @@ module.exports = {
     Vehicle
 };
 
-let car = new Vechile('mercury', 'rad_sedan', '2002', 'white', 50000)
+let car = new Vehicle('mercury', 'rad_sedan', '2002', 'white', 50000)
 console.log(car)
