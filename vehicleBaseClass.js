@@ -90,7 +90,4 @@ class Vehicle {
 //This exports things you want to use from this "module", more info in readme
 module.exports = {
     Vehicle
-};
-
-let car = new Vehicle('mercury', 'rad_sedan', '2002', 'white', 50000)
-console.log(car)
+}
