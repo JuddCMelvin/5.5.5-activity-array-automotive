@@ -16,12 +16,12 @@ const VehicleModule = require('./vehicleBaseClass').Vehicle
 class Car extends VehicleModule {
     constructor(make, model, year, color, mileage) {
         super(make, model, year, color, mileage);
-        this.maximumPassengers = maximumPassengers; 
-        this.passengers = passengers; 
-        this.numberOfWheels = numberOfWheels; 
-        this.maximumSpeed = maximumSpeed; 
-        this.fuel = fuel; 
-        this.scheduleService = scheduleService; 
+        this.maximumPassengers = 5; 
+        this.passengers = 0; 
+        this.numberOfWheels = 4; 
+        this.maximumSpeed = 160; 
+        this.fuel = 10; 
+        this.scheduleService = false; 
     }
 
     loadPassenger(num) {
