@@ -13,11 +13,13 @@ class Vehicle {
 
     start() {
         if (this.fuel > 0) {
-            return this.started = true;
+            this.started = true;
             console.log("engine started...!!!");
+            return
         } else {
-            return this.started = false;
+            this.started = false;
             console.log("engine cannot start...");
+            return 
         }
     }
     accelerate() {
@@ -69,7 +71,7 @@ class Vehicle {
 
     autoDrive()
     {
-      
+
     }
 
     typeOfVehicle(wheels) {
@@ -88,4 +90,7 @@ class Vehicle {
 //This exports things you want to use from this "module", more info in readme
 module.exports = {
     Vehicle
-}
+};
+
+let car = new Vechile('mercury', 'rad_sedan', '2002', 'white', 50000)
+console.log(car)
