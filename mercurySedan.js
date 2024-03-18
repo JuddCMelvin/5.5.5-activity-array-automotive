@@ -1,9 +1,9 @@
 //this includes the vehicle class as a module
-const VehicleModule = require('/Users/juddchalmersmelvin/class/js/5.5.5-activity-array-automotive/vehicleBaseClass.js').Vehicle
+const VehicleModule = require('./vehicleBaseClass').Vehicle
 
 //this shows how to call from this module...
-// let v = new VehicleModule.Vehicle("Mercury", "Sedan", "1965", "color", "mileage");
-// console.log(v.make)
+let v = new VehicleModule.Vehicle("Mercury", "Sedan", "1965", "color", "mileage");
+console.log(v.make)
 
 
 //After you write the derived Car class, you should test it out.
